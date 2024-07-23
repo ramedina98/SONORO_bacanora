@@ -54,8 +54,34 @@
         </header>
         <!--main section-->
         <main>
+            <!--This section should appear 3 seconds after opening the page, to ask for your age...-->
+            <section id="section_ask_age">
+                <div id="mainDiv_ask_age">
+                    <!--Logo-->
+                    <figure>
+                        <img src="./app/public/logos/logo.png" alt="logo">
+                    </figure>
+                    <!--Information-->
+                    <div id="info_container">
+                        <!--Text-->
+                        <span id="text_of_info_section">
+                            Estamos comprometidos con el consumo responsable de SONORO bacanora
+                        </span>
+                        <form action="">
+                            <div>
+                                <label for="age">Año de nacimiento</label>
+                                <input type="text" placeholder="YYYY" id="age" name="age">
+                            </div>
+                            <button id="btn_access">Acceder</button>
+                        </form>
+                        <div id="conditionsOfUse">
+                            <span id="terms">Condiciones de uso</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!--Slogan (banner)-->
-            <section>
+            <section id="slogan_section">
                 <div class="left" id="slogan">
                     <h3>Tibio ni el amor, ni el bacanora</h3>
                 </div>
@@ -80,14 +106,36 @@
                 </dev>
             </section>
             <!--mixology-->
-            <section>
-                <div class="left"></div>
-                <dev class="right"></dev>
+            <section id="mixology_section">
+                <dev class="left" id="bottle_of_bacanora_sonoro">
+                    <figure>
+                        <img src="https://noro.mx/wp-content/uploads/2023/07/9-mixologia-bacanora-1365x2048.jpeg" alt="">
+                    </figure>
+                </dev>
+                <div class="right" id="mixology_text">
+                    <h3>conoce toda la mixología</h3>
+                    <span>7 recetas refrescantes para el verano</span>
+                    <a href="https://noro.mx/7-recetas-de-mixologia-con-bacanora/" target="_blank" id="btn_explorar_mixologia">
+                        explorar
+                    </a>
+                </div>
             </section>
             <!--contact form-->
-            <section>
-                <div class="left"></div>
-                <dev class="right"></dev>
+            <section id="contact_section">
+                <form action="">
+                    <h4>
+                        Déjanos tu comentario
+                    </h4>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Escribe tu opinion</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button>Envíar</button>
+                </form>
             </section>
         </main>
         <!--footer section-->

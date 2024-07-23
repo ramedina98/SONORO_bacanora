@@ -106,11 +106,144 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    /*this section contents the age gate*/
+    & #section_ask_age{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgba(122, 117, 59, 0.287);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        & #mainDiv_ask_age{
+            background-color: rgb(32, 32, 32);
+            border-radius: 0.3em;
+            padding: 2em;
+            width: clamp(320px, 95%, 550px);
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            & figure{
+                width: 210px;
+                height: 210px;
+                & img{
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            & #info_container{
+                width: 95%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                & #text_of_info_section{
+                    color: var(--rompope_font_light);
+                    font-size: 1.2em;
+                    font-weight: 600;
+                    letter-spacing: 0.07em;
+                    text-align: center;
+                    margin: 1em;
+                    line-height: 1.5;
+                }
+                & form{
+                    width: 95%;
+                    height: auto;
+                    margin-top: 0.5em;
+                    padding: 0.5em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    & div{
+                        width: 65%;
+                        height: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        & label{
+                            color: var(--rompope_font_light);
+                            font-weight: 600;
+                            letter-spacing: 0.05em;
+                            font-size: 1em;
+                            margin-bottom: 0.3em;
+                        }
+                        & input{
+                            width: 100%;
+                            height: auto;
+                            padding: 0.5em;
+                            border: none;
+                            border-radius: 0.3em;
+                            outline: none;
+                            text-align: center;
+                            color: var(--black);
+                            font-weight: 500;
+                            letter-spacing: 0.06em;
+                            font-size: 1.1em;
+                            margin-bottom: 1em;
+                        }
+                        & input::placeholder{
+                            color: var(--green);
+                            font-weight: 500;
+                            letter-spacing: 0.06em;
+                            font-size: 1.1em;
+                        }
+                    }
+                    & button{
+                        width: 65%;
+                        padding: 0.8em;
+                        border: none;
+                        border-radius: 0.3em;
+                        background-color: var(--rompope);
+                        color: var(--black);
+                        font-weight: 700;
+                        letter-spacing: 0.06em;
+                        font-size: 1.05em;
+                    }
+                    & button:hover{
+                        transition: all 300ms ease-in-out;
+                        background-color: transparent;
+                        border: 0.5px solid var(--rompope_font_light);
+                        color: var(--rompope_font_light);
+                    }
+                }
+                & #conditionsOfUse{
+                    width: 100%;
+                    height: auto;
+                    margin-top: 1.5em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    & #terms{
+                        color: var(--rompope_font_light);
+                        font-size: 0.9em;
+                        font-weight: 600;
+                        letter-spacing: 0.07em;
+                        text-align: center;
+                        margin: 1em;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
     & section{
         width: clamp(320px, 90%, 900px);
         height: auto;
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 1061px){
+            justify-content: center;
+        }
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
@@ -125,7 +258,6 @@ main{
         /*more specific settings of each div within the sections*/
         /*First section tag, slogan and bacanora bottle photo...*/
         & #slogan{
-            background-color: var(--black);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -190,6 +322,63 @@ main{
             }
         }
         /*third section tag, which contents are tips on mixology*/
+        & #bottle_of_bacanora_sonoro{
+            & figure{
+                width: 100%;
+                height: 100%;
+                & img{
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        & #mixology_text{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            & h3{
+                color: var(--rompope);
+                font-weight: 800;
+                font-size: 2.3em;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                margin: 2.2em 1em 0.5em 1em;
+                text-align: center;
+            }
+            & span{
+                color: var(--black);
+                font-weight: 500;
+                letter-spacing: 0.07em;
+                font-size: 1.1em;
+                margin: 0em 1em 2.8em 1em;
+            }
+            & a{
+                text-decoration: none;
+                cursor: pointer;
+                border: 3px solid var(--rompope_font_light);
+                border-radius: 0.3em;
+                background-color: transparent;
+                color: var(--black);
+                padding: 0.7em 1.5em;
+                letter-spacing: 0.07em;
+                font-size: 1.1em;
+                font-weight: 600;
+
+            }
+            & a:hover{
+                transition: all 300ms ease-in-out;
+                border: none;
+                background-color: var(--black);
+                color: var(--rompope_font_light);
+            }
+        }
+    }
+    /*This is the first section tag*/
+    & #slogan_section{
+        background-color: var(--black);
     }
     /*
     this is the second section tag, which contents the vision of the brand
@@ -197,6 +386,88 @@ main{
     */
     & #history_section{
         background-color: var(--green);
+    }
+    /*this is the third sectiong tag, which contents is about mixology*/
+    & #mixology_section{
+        background-color: var(--blue);
+    }
+    /*this is the fourth section tag, which contents is the contact form*/
+    & #contact_section{
+        min-height: 450px;
+        background-image: url("https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=2757&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & form{
+            background-color: rgba(66, 78, 56, 0.479);
+            padding: 1em;
+            border-radius: 0.3em;
+            width: clamp(320px, 95%, 500px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 1em 0;
+            & h4{
+                color: var(--rompope_font_light);
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                font-size: 2em;
+                margin-bottom: 1.2em;
+                padding: 0.5em 1em;
+                border-radius: 0.3em;
+                background-color: rgba(66, 78, 56, 0.257);
+            }
+            & div{
+                width: 100%;
+                & label{
+                    color: var(--rompope_font_light);
+                    font-weight: 600;
+                    letter-spacing: 0.05em;
+                    padding: 0.5em 1em;
+                    border-radius: 0.3em;
+                    background-color: rgba(66, 78, 56, 0.257);
+                }
+                & input{
+                    border: none;
+                    background-color: var(--rompope_font_light);
+                    padding: 1em;
+                    font-weight: 500;
+                    letter-spacing: 0.06em;
+                    color: var(--black);
+                }
+                & input::placeholder{
+                    color: var(--green);
+                }
+                & textarea{
+                    border: none;
+                    background-color: var(--rompope_font_light);
+                    font-weight: 500;
+                    letter-spacing: 0.06em;
+                    color: var(--black);
+                }
+            }
+            & button{
+                width: 100%;
+                cursor: pointer;
+                border: none;
+                background-color: var(--black);
+                color: var(--rompope_font_light);
+                border-radius: 0.3em;
+                padding: 0.8em 0;
+                font-weight: 600;
+                letter-spacing: 0.06em;
+                font-size: 1.1em;
+            }
+            & button:hover{
+                transition: all 300ms ease-in-out;
+                background-color: var(--rompope_font_light);
+                color: var(--black);
+            }
+        }
     }
 }
 
