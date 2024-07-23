@@ -8,6 +8,7 @@
     --green: rgba(167, 205, 135, 0.951);
     --blue: rgb(120, 211, 236);
     --yellow: rgb(255, 247, 24);
+    --rompope_font_light: rgb(255, 251, 224);
 }
 
 /*basic css*/
@@ -23,4 +24,278 @@ html,
 body{
     width: 100%;
     height: auto;
+}
+
+/*header settings*/
+header{
+    background-color: var(--rompope);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+}
+#title_and_options{
+    & h5{
+        color: var(--black);
+        letter-spacing: 0.07em;
+        & span{
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}
+#nav_options{
+    border-bottom: 0.6px solid var(--black);
+    border-radius: 0.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0 1em 0.5em 1em;
+    margin-top: 2.3em;
+    margin-bottom: 0;
+    & li{
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        font-size: 1.04em;
+        padding: 0.5em;
+        border-radius: 0.5em;
+    }
+    & li:hover{
+        cursor: pointer;
+        background-color: var(--green);
+        color: white;
+    }
+}
+#nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /*Div container of the icon of burger menu...*/
+    & #menu_burguer_icon_container{
+        width: 100px;
+        margin-left: 3em;
+    }
+    /*The span that contents the brand*/
+    & #brand{
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        font-size: 1.35em;
+    }
+    /*The img that contents the logo brand*/
+    #logo_brand{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center;
+        margin-left: 2.6em;
+        margin-top: 0.1em;
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/*settings of the main*/
+main{
+    background-color: var(--rompope_font_light);
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & section{
+        width: clamp(320px, 90%, 900px);
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        & .left{
+            width: 449px;
+            height: 450px;
+        }
+        & .right{
+            width: 449px;
+            height: 450px;
+        }
+        /*more specific settings of each div within the sections*/
+        /*First section tag, slogan and bacanora bottle photo...*/
+        & #slogan{
+            background-color: var(--black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & h3{
+                color: var(--rompope_font_light);
+                font-size: 2em;
+                letter-spacing: 0.03em;
+                font-weight: 900;
+                margin: 0 1em;
+                text-align: center;
+                line-height: 1.5;
+            }
+        }
+        & #bacanora_bottle{
+            & figure{
+                width: 100%;
+                height: 100%;
+                & img{
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        /*Second section tag, which contents tis the vision of the brand*/
+        & #logo_history{
+            & figure{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & img{
+                    object-fit: cover;
+                    object-position: center;
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+        }
+        & #text_history{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            & h3{
+                font-size: 2.8em;
+                font-weight: 800;
+                letter-spacing: 0.05em;
+                color: var(--rompope_font_light);
+                margin-bottom: 1em;
+            }
+            & p{
+                font-size: 1.3em;
+                color: var(--black);
+                font-weight: 500;
+                letter-spacing: 0.05em;
+                margin: 0 1em;
+                line-height: 1.5;
+                text-align: center;
+            }
+        }
+        /*third section tag, which contents are tips on mixology*/
+    }
+    /*
+    this is the second section tag, which contents the vision of the brand
+    the only setting that it has is the background...
+    */
+    & #history_section{
+        background-color: var(--green);
+    }
+}
+
+/*Settings of the footer*/
+footer{
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & #SBP{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 460px){
+            justify-content: center;
+        }
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 3em;
+        & #socialMedia_conteiner{
+            width: 220px;
+            & h3{
+                color: var(--black);
+                font-weight: 500;
+                font-size: 1.4em;
+                letter-spacing: 0.05em;
+                @media screen and (max-width: 460px){
+                    text-align: center;
+                }
+            }
+            & ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                list-style: none;
+                padding-left: 0;
+                margin-top: 2em;
+                & li{
+                    font-size: 1.7em;
+                    color: var(--black);
+                }
+            }
+        }
+        & #footer_brand{
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            & span{
+                font-weight: 700;
+                font-size: 1.3em;
+                letter-spacing: 0.07em;
+                color: var(--black);
+            }
+            & figure{
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+                object-position: center;
+                margin-top: 1em;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        & #terms_conditions{
+            width: 365px;
+            height: auto;
+            text-align: center;
+            font-weight: 500;
+            color: var(--black);
+            font-size: 1.1em;
+            letter-spacing: 0.05em;
+            & span{
+                background-color: var(--rompope);
+                border-radius: 0.2em;
+                padding: 0.3em;
+                margin-left: 0.6em;
+            }
+        }
+    }
+    & #copy_right{
+        width: 95%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        & span{
+            margin: 1em 0;
+        }
+    }
 }
