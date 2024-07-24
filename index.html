@@ -15,7 +15,6 @@
         <!--css-->
         <!--todo: CAMBIAR AQUI LAS RUTAS BIEN-->
         <link rel="stylesheet" href="./app/css/style.css">
-        <link rel="stylesheet" href="./app/css/responsive.css">
         <!--cdn de bootstrap, stilos-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!--JS-->
@@ -69,8 +68,8 @@
                         </span>
                         <form action="">
                             <div>
-                                <label for="age">Año de nacimiento</label>
-                                <input type="text" placeholder="YYYY" id="age" name="age">
+                                <label for="age" id="lblAge">Año de nacimiento</label>
+                                <input type="text" placeholder="YYYY" id="age" name="age" maxlength="4" required>
                             </div>
                             <button id="btn_access">Acceder</button>
                         </form>
@@ -101,7 +100,9 @@
                 <dev class="right" id="text_history">
                     <h3>Vision SONORO</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur numquam inventore quam iusto et error illum ex explicabo hic rem officiis quidem aliquam, nihil similique voluptas amet incidunt ab.
+                        Liderar la producción y venta de Bacanora, destacándonos por la calidad, tradición y
+                        sustentabilidad. Queremos hacer del Bacanora un ícono cultural de México y un destilado
+                        mundialmente reconocido.
                     </p>
                 </dev>
             </section>
@@ -128,7 +129,7 @@
                     </h4>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Escribe tu opinion</label>
