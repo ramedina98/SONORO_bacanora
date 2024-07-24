@@ -12,12 +12,21 @@ const inputAge = document.getElementById("age");
 
 // this function will display the age gate after 3 seconds of entering the web page...
 const displayAgeGate = () => {
-    // set time out to display the element after 1.5 seconds...
-    setTimeout(() => {
-        ageGate.style.display = "flex";
-        // we do not need the scroll bar in this part...
-        document.body.style.overflow = "hidden";
-    }, 1500);
+    //initialize an instance of cookie handler
+    const ageCookie = new cookieHandler('age');
+
+    //get the value stored in the cookie
+    const age = ageCookie.value;
+
+    //check if the value is null and if the age (which is the value) is out of the range to display the age gate...
+    if(age === null  || (age < 18 || age > 95)){
+        // set time out to display the element after 1.5 seconds...
+        setTimeout(() => {
+            ageGate.style.display = "flex";
+            // we do not need the scroll bar in this part...
+            document.body.style.overflow = "hidden";
+        }, 1500);
+    }
 }
 // call the function...
 displayAgeGate();
@@ -67,6 +76,10 @@ btn_access.addEventListener('click', (e) => {
     if(age >= 18 && age <= 94){
         ageGate.style.display = "none";
         document.body.style.overflow = "auto";
+
+        // we set the value into a cookie...
+        const ageCookie = new cookieHandler('age', '', 90);
+        ageCookie.value = age;
     } else if(age > 95){ // we also validate that you do not enter an age that exceeds the average human lifespan...
         //add the class 'shake_div'...
         ask_age_div.classList.add('shake_div');
