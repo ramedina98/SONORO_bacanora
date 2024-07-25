@@ -13,7 +13,7 @@ const inputAge = document.getElementById("age");
 // this function will display the age gate after 3 seconds of entering the web page...
 const displayAgeGate = () => {
     //initialize an instance of cookie handler
-    const ageCookie = new cookieHandler('age');
+    const ageCookie = new CookieHandler('age');
 
     //get the value stored in the cookie
     const age = ageCookie.value;
@@ -78,7 +78,7 @@ btn_access.addEventListener('click', (e) => {
         document.body.style.overflow = "auto";
 
         // we set the value into a cookie...
-        const ageCookie = new cookieHandler('age', '', 90);
+        const ageCookie = new CookieHandler('age', '', 90);
         ageCookie.value = age;
     } else if(age > 95){ // we also validate that you do not enter an age that exceeds the average human lifespan...
         //add the class 'shake_div'...

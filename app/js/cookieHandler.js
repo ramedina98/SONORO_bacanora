@@ -1,8 +1,11 @@
-class cookieHandler{
+class CookieHandler{
     constructor(name, value = '', minutes = 90){
         this.name = name;
-        this._value = value;
         this.minutes = minutes;
+        // if the value is not empty...
+        if (value !== '') {
+            this.setCookie(value, minutes);
+        }
     }
 
     // getter...
@@ -16,14 +19,24 @@ class cookieHandler{
     }
 
     // method to obtain the value of a cookie
-    getCookie(){
-        // get the cookies...
-        const value = `${document.cookie}`;
-        // search the require cookie...
-        const parts = value.split(`; ${this.name}=`);
-        // if the cookie is the correct one we return its value...
-        if(parts.length === 2) return parts.pop().split(';').shift();
-        // else, just return null to indicate that we don't find the required cookie
+    getCookie() {
+        // Create a string with the cookie name followed by an equal sign
+        const nameEQ = `${this.name}=`;
+        // Split the document.cookie string into individual cookies using the semicolon as a delimiter
+        const cookies = document.cookie.split(';');
+        // Iterate through the array of cookies
+        for (let i = 0; i < cookies.length; i++) {
+            // Get the current cookie and store it in a variable
+            let cookie = cookies[i];
+            // Remove any leading spaces from the cookie string
+            while (cookie.charAt(0) === ' ') cookie = cookie.substring(1);
+            // Check if the current cookie starts with the desired cookie name
+            if (cookie.indexOf(nameEQ) === 0) {
+                // If the desired cookie is found, return its value
+                return cookie.substring(nameEQ.length, cookie.length);
+            }
+        }
+        // If the desired cookie is not found, return null
         return null;
     }
 
