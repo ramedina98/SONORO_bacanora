@@ -1,4 +1,4 @@
-class CookieHandler{
+export class CookieHandler{
     constructor(name, value = '', minutes = 90){
         this.name = name;
         this.minutes = minutes;
