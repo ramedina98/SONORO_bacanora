@@ -53,12 +53,23 @@ header{
     padding: 0 1em 0.5em 1em;
     margin-top: 2.3em;
     margin-bottom: 0;
+    /*if the width of the page is 641 pixels we need to hidde all the li's except the frist and the second ones*/
+    @media screen and (max-width: 641px) {
+        justify-content: space-evenly;
+        & li:nth-child(1),
+        li:nth-child(2){
+            display: list-item;
+        }
+    }
     & li{
         font-weight: 600;
         letter-spacing: 0.05em;
         font-size: 1.04em;
         padding: 0.5em;
         border-radius: 0.5em;
+        @media screen and (max-width: 641px){
+            display: none;
+        }
     }
     & li:hover{
         cursor: pointer;
@@ -89,6 +100,9 @@ header{
         object-position: center;
         margin-left: 2.6em;
         margin-top: 0.1em;
+        @media screen and (max-width: 352px) {
+            display: none;
+        }
         & img{
             width: 100%;
             height: 100%;
@@ -279,7 +293,9 @@ main{
             & figure{
                 width: 100%;
                 height: 100%;
+                border-radius: 0 0.5em 0 0;
                 & img{
+                    border-radius: 0 0.5em 0 0;
                     object-fit: cover;
                     object-position: center;
                     width: 100%;
@@ -314,6 +330,9 @@ main{
                 letter-spacing: 0.05em;
                 color: var(--rompope_font_light);
                 margin-bottom: 1em;
+                @media screen and (max-width: 510px){
+                    font-size: 9vw;
+                }
             }
             & p{
                 font-size: 1.3em;
@@ -323,6 +342,9 @@ main{
                 margin: 0 1em;
                 line-height: 1.5;
                 text-align: center;
+                @media screen and (max-width: 510px){
+                    font-size: 4.9vw;
+                }
             }
         }
         /*third section tag, which contents are tips on mixology*/
@@ -358,6 +380,9 @@ main{
                 letter-spacing: 0.07em;
                 font-size: 1.1em;
                 margin: 0em 1em 2.8em 1em;
+                @media screen and (max-width: 510px){
+                    text-align: center;
+                }
             }
             & a{
                 text-decoration: none;
@@ -382,6 +407,7 @@ main{
     }
     /*This is the first section tag*/
     & #slogan_section{
+        border-radius: 0.5em 0.5em 0 0;
         background-color: var(--black);
     }
     /*
@@ -397,6 +423,7 @@ main{
     }
     /*this is the fourth section tag, which contents is the contact form*/
     & #contact_section{
+        border-radius: 0 0 0.5em 0.5em;
         min-height: 450px;
         background-image: url("https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=2757&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         background-repeat: no-repeat;
@@ -540,6 +567,10 @@ footer{
                 object-fit: cover;
                 object-position: center;
                 margin-top: 1em;
+                @media screen and (max-width: 390px){
+                    display: none;
+                    margin-bottom: 4.5em;
+                }
                 img{
                     width: 100%;
                     height: 100%;
