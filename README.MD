@@ -2,11 +2,18 @@
 
 Landing pages for Sonoro Bacanora, warm neither Sonoro nor love.
 
-<img src="/app/public/imgReadme/Sonoro.png" width="400">
+<img src="/app/public/imgReadme/Sonoro.png" width="900">
 
 ## Table of contents
 - [History](#history)
 - [Vision](#vision)
+- [Landing pages specifications](#landing-pages-specifications)
+    - [Structure](#structure)
+    - [Age of majority verification form](#age-of-majority-verification-form)
+        - [Cookie Handler Class](#cookie-handler-class)
+        - [Logic of the form of legal age](#logic-of-the-form-of-legal-age)
+- [Development Team](#development-team)
+- [Contact E-mail](#contact-e-mail)
 
 ## History
 Sonoro is a new brand of bacanora from Sonora, dedicated to becoming the best brand of this spirit. With decades of tradition in bacanora production, Sonoro captures the essence of Sonoran culture in every bottle. Bacanora, a distilled spirit made from native agave from Sonora, has a rich history dating back more than 300 years. Initially produced clandestinely due to government prohibitions, bacanora resurfaced strongly and was legalized in 1992, being recognized as a Protected Designation of Origin.
@@ -23,10 +30,10 @@ To lead the production and sale of Bacanora, standing out for quality, tradition
 ## Landing pages specifications
 This landing page was developed in a simple way. We used technologies such as:
 
-- HTML <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" width="50">
-- CSS <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" width="50">
-- JavaScript <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" width="50">
-- Bootstrap <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" width="50">
+- <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+- <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
+- <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
 ### Structure
 It was arranged in a way that first shows the brand's slogan next to its bottle, then the vision of what Sonoro is, followed by recommendations of preparations with bacanoro `(which are made with sonoro)` and finally a contact form with the brand.
